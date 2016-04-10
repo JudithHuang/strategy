@@ -28,25 +28,33 @@ performanceS.prototype.calculate = function(salary) {
     return salary * 4;
 };
 
-var performanceA = function(){};
+var performanceA = function() {};
 
 performanceA.prototype.calculate = function(salary) {
     return salary * 3;
 };
 
-var performanceB = function(){};
+var performanceB = function() {};
 
 performanceB.prototype.calculate = function(salary) {
     return salary * 2;
 };
 
 /**
+var performanceC = function() {};
+
+performanceC.prototype.calculate = function(salary) {
+  return salary * 5;
+}
+**/
+
+/**
   接下来定义奖金类Bonus
 **/
 
 var Bonus = function() {
-    this.salary = null;        //原始工资
-    this.strategy = null;    //绩效等级对应的策略对象
+    this.salary = null;        // 原始工资
+    this.strategy = null;    // 绩效等级对应的策略对象
 };
 
 Bonus.prototype.setSalary = function(salary) {
@@ -54,11 +62,11 @@ Bonus.prototype.setSalary = function(salary) {
 };
 
 Bonus.prototype.setStrategy = function(strategy) {
-    this.strategy = strategy;    //设置员工绩效等级对应的策略对象
+    this.strategy = strategy;    // 设置员工绩效等级对应的策略对象
 };
 
-Bonus.prototype.getBonus = function() {    //取得奖金数额
-    return this.strategy.calculate( this.salary );    //把计算奖金的操作委托给对应的策略对象
+Bonus.prototype.getBonus = function() {    // 取得奖金数额
+    return this.strategy.calculate(this.salary);    // 把计算奖金的操作委托给对应的策略对象
 };
 
 /**

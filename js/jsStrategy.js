@@ -19,4 +19,4 @@ var calculateBonus = function(level, salary) {
   return strategies[level](salary);
 }
 
-console.log('performance is B, salary is 10000,bonus is', calculateBonus('B', 10000));
+console.log('performance is B, salary is 10000, bonus is', calculateBonus('B', 10000));
